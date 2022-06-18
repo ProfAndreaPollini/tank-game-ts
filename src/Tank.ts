@@ -22,6 +22,8 @@ class Tank {
     this.sprite.scale.set(0.5);
     this.sprite.position.set(100, 100);
 
+   
+
     this.startText = new PIXI.Text(name, {
       fontFamily: 'Arial',
       fontSize: 12,
@@ -62,7 +64,7 @@ class Tank {
 
   public setPositionX(_x: number) {
     this.sprite.position.x = _x;
-    this.body.position.x = _x;
+    this.mainBody.position.x = _x;
   }
 
   public setTextPositionX(_x: number) {
@@ -70,11 +72,11 @@ class Tank {
   }
 
   public setVelocity(_x: number, _y: number) {
-    Body.setVelocity(this.body, { x: _x, y: _y });
+    Body.setVelocity(this.mainBody, { x: _x, y: _y });
   }
 
   public setVelocityX(_x: number) {
-    Body.setVelocity(this.body, { x: _x, y: this.body.velocity.y });
+    Body.setVelocity(this.mainBody, { x: _x, y: this.mainBody.velocity.y });
   }
 
 }

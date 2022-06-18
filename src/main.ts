@@ -55,10 +55,10 @@ app.ticker.add((delta) => {
 
   t.setVelocityX(Math.cos(elapsed / 150.0) / delta);
   
-  console.log(t.body.position)
+  console.log(t.mainBody.position)
 
-  t.setTextPositionX(t.body.position.x)
-  t.sprite.position = t.body.position;
+  t.setTextPositionX(t.mainBody.position.x)
+  t.sprite.position = t.mainBody.position;
 })
 
 Matter.Runner.run(engine);
